@@ -1,0 +1,20 @@
+---
+title: "Yuchen Zheng"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+
+---
+
+Hi!
+
+I'm Yuchen Zheng, a first-year student in the MS biostatistics program at Columbia Mailman School of Public Health. I graduated from the University of California, Santa Barbara this June with a BS degree in Statistics and Data Science. 
+
+During my undergraduate study, I worked in a research lab as an undergraduate research assistant where I worked on a quantitative project that studies invasive species distribution modeling using a program called MaxEnt. I have also done several academic data analysis projects using both R and python. 
+
+Currently, I’m looking forward to finding an analytics internship position for next summer. 
+
+Here, you can view my [resume](resume.html), check out my [github page](https://github.com/yuchen14), connect me on [LinkedIn](https://www.linkedin.com/in/yuchen-zheng-a16394162/) or [contact](mailto:<yuchenzheng14@gmail.com>) me.
+
+

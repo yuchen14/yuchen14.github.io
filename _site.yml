@@ -1,0 +1,14 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: resume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<yuchenzheng14@gmail.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/yuchen14/
+output:
+  html_document:
+    theme: sandstone
