@@ -5,6 +5,10 @@ navbar:
   right:
     - text: "Resume"
       href: resume.html
+    - text: "plotly"
+      href: plotly.html
+    - text: "Dashboard"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<yuchenzheng14@gmail.com>
     - icon: fa-github fa-lg

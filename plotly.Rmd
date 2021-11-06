@@ -1,0 +1,72 @@
+---
+title: "Plotly examples"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+
+rest_inspec = 
+  rest_inspec %>% 
+  filter(cuisine_description == "American" |
+         cuisine_description == "Thai" |
+         cuisine_description == "Chinese" |
+         cuisine_description == "Korean" |
+         cuisine_description == "Mexican" |
+         cuisine_description == "Italian" |
+         cuisine_description == "African" |
+         cuisine_description == "Japanese" |
+         cuisine_description == "French" |
+         cuisine_description == "Irish")
+```
+
+# Plotly plots
+
+## violin plot
+
+```{r}
+rest_inspec %>% 
+  filter(cuisine_description == "American")  %>% 
+  plot_ly(x = ~grade, y = ~score, color = ~grade, type = "violin", colors = "viridis")
+  
+```
+
+## boxplot
+
+```{r}
+rest_inspec %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, score)) %>% 
+  plot_ly(
+    y = ~score, x = ~cuisine_description, color = ~cuisine_description, 
+    type = "box", colors = "viridis")
+```
+
+
+## bar plot
+
+```{r}
+rest_inspec %>% 
+  group_by(cuisine_description) %>% 
+  summarise(
+    num_violations = n(),
+    num_restaurants = n_distinct(dba),
+    avg_violations = num_violations/num_restaurants
+  ) %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, avg_violations)) %>% 
+  plot_ly(
+    x = ~cuisine_description, y = ~avg_violations, 
+    color = ~cuisine_description, type = "bar", colors = "viridis")
+
+```
+
+
+
